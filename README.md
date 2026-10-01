@@ -2,7 +2,7 @@
 
 ### Private storage without the usual password surface.
 
-**$NBP** — the token powering the NoBreach ecosystem.
+**$NBP** - the token powering the NoBreach ecosystem.
 
 NoBreach is a wallet-authenticated encrypted file vault built on **Robinhood Chain**.
 
