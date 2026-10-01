@@ -1,0 +1,45 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+
+  // provider = "sqlite"
+  // url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id              String  @id @default(uuid())
+  owner           String  @unique
+  encryptedSecret String?
+  legacyAccessAt  DateTime?
+  files           File[]
+  payments        Payment[]
+}
+
+model Payment {
+  id        String   @id @default(uuid())
+  owner     String
+  txHash    String   @unique
+  asset     String
+  amount    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [owner], references: [owner])
+
+  @@index([owner])
+}
+
+model File {
+  id       String @id @default(uuid())
+  owner    String
+  metadata String
+  user     User   @relation(fields: [owner], references: [owner])
+}
+
+model Nonce {
+  address   String @id
+  nonce     String
+}
