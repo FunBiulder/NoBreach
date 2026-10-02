@@ -4,6 +4,8 @@
 
 **$NBP** - the token powering the NoBreach ecosystem.
 
+CA : 0x9e545052593BC326f84f257B7e4f73Cf6A8C2Cb3
+
 NoBreach is a wallet-authenticated encrypted file vault built on **Robinhood Chain**.
 
 Instead of uploading files in plaintext and protecting them with a traditional email/password account, NoBreach uses your wallet as the identity layer and encrypts files **in the browser before they ever reach the storage layer**.
