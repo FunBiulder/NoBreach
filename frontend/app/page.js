@@ -460,7 +460,7 @@ export default function Home() {
             <div className="utility-links">
               <a className="utility-docs" href="/docs">Docs</a>
               <span>Twitter / Soon</span>
-              <span>CA / Soon</span>
+              <span>CA : 0x9e545052593BC326f84f257B7e4f73Cf6A8C2Cb3</span>
               <span>Robinhood Chain / 4663</span>
             </div>
           </div>
